@@ -11,6 +11,9 @@ import com.mtw.josealejandrosanchezortega.droidcafe.R.id.fab
 import com.mtw.josealejandrosanchezortega.droidcafe.R.id.toolbar
 
 import kotlinx.android.synthetic.main.activity_main.*
+import android.content.Intent
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -47,6 +50,10 @@ class MainActivity : AppCompatActivity() {
 
     fun showFoodOrder(message: String) {
         displayToast(message)
+
+        // Intent PARA HACER EXPLICITO EL QUE SE MUESTRE EL LAYOUT activity_order
+        val intent = Intent(this, OrderActivity::class.java)
+        startActivity(intent)
     }
 
     fun showDonutOrder(view: View) {
